@@ -1,0 +1,169 @@
+/* CSS interno */
+
+
+body{ 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+    font-size: 2em;  /* 1rem = 16px => 1em = "M" */
+    font-weight: bold;
+}
+
+h2{ 
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header{
+    background-color: #c50404;
+    padding: 1rem 2rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky; 
+    top: 0;
+}
+
+header nav{
+    padding: 1rem 2rem;
+    box-shadow: 0px 4px 8px;
+    top: 0;
+}
+
+header ul{ 
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header a{
+    color: #ffffff;
+    font-weight: 700;
+    padding: .5rem 1rem;
+}
+
+header a:hover{
+    background-color: rgb(139, 0, 0);
+}
+ 
+#sobreMim a{
+    color: red;
+}
+
+section{ 
+    height: auto;
+    width: auto;
+    margin: 2rem;
+    scroll-margin-top: 4rem; 
+    padding: 1rem;
+    border: 1px solid darkred;
+    border-radius: 6px;
+    /* overflow: hidden; */
+    overflow: auto;
+    text-align: center;
+
+    img{
+        margin: auto;
+    }
+}
+
+p{
+    margin-bottom: 2rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input,
+textarea { 
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: .25rem .75rem;
+    color: #341d1d;
+    resize: none;
+}
+
+input[type="submit"]{
+    background-color: darkred;
+    color: floralwhite;
+}
+
+textarea{
+    max-width: 80rem;
+    height: 5rem;
+}
+
+.card {
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    list-style: none;
+}
+
+.titulo-card {
+    font-weight: bold;
+    color: rgb(81, 1, 1);
+    font-size: 1.3rem;
+}
+
+.instituicao-card {
+    font-size: 1.1rem;
+    color: #555;
+
+}
+
+.cards-em-coluna{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.titulo-secao{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section#formacaoAcademica{
+    border: none;
+}
+
+.tecnologia-nome{
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.icone-card{
+    font-size: 1.5;
+}
+
+.soft-skills{
+    font-size: 1.1rem;
+    color: #555;
+}
+
+section#hardSkills{
+    border: none;
+}
+
+section#softSkills{
+    border: none;
+}
+
+card-em-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+cards-em-liha{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}//
+
