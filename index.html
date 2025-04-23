@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
     <head>
         <!-- Meta informações sobre a página -->
         <meta charset="utf-8">
@@ -24,26 +24,23 @@
                     <li><a href="#meusProjetos">Projetos</a></li>
                     <li><a href="#meusArtigos">Artigos</a></li>
                     <li><a href="#contato">Contato</a></li>
+                    <li><span id="botão-tema">☀️</span></li>
+                    <li><span id="botão-contraste">🔆</span></li>
                 </ul>
             </nav>
         </header>
-
-
         <section id="sobreMim">
-            <h1>Sobre mim</h1>
-        
-            <img src="https://avatars.githubusercontent.com/u/200938997?s=400&u=3612db33a0f043f5f6139064ccc0a7668be33994&v=4" alt="Personagem da saga Sonic Metal Sonic Segurando uma bandeira" width="200" height="200" title="Personagem da saga Sonic Metal Sonic Segurando uma bandeira.">
-           <p>https://github.com/Migueldev05/sobre-mim.git</p>
-        
-           <!-- >section(h2>{Nova Seção})+p*2>lorem20 -->
+            
+            <ul class="card">
+               <li class="titulo-card">Sobre mim</li>
            
-           <!-- header>nav>ul>li*10>a>{links$} -->
-
-           <ul>
-               <li><a href="https://github.com/Migueldev05" target="_blank"> Acesse o meu GitHub</a></li>
-                <li>
-                    <a href="https://br.linkedin.com/?mcid=6821526239111716925&src=go-pa&trk=sem-ga_campid.12619604099_asid.149519181115_crid.725790844702_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9197522&cid=&gad_source=1&gclid=CjwKCAjwtdi_BhACEiwA97y8BPo8qH9JkaOF6DG2y4SCXYfkeHvjfUn1hwjuSv5yuOI_A27lC81xKxoCYT4QAvD_BwE&gclsrc=aw.ds" target="_blank">Acesse meu linkedin</a>
-                </li>
+               <li><img src="https://avatars.githubusercontent.com/u/200938997?s=400&u=3612db33a0f043f5f6139064ccc0a7668be33994&v=4" width="200" height="200"></li>
+              <li class="meu-github"><a href="https://github.com/Migueldev05/sobre-mim.git" target="_blank">Acesse meu github</a></li>
+           
+              <!-- >section(h2>{Nova Seção})+p*2>lorem20 -->
+              
+              <!-- header>nav>ul>li*10>a>{links$} -->
+                    <li class="meu-linkedin"><a href="https://br.linkedin.com/?mcid=6821526239111716925&src=go-pa&trk=sem-ga_campid.12619604099_asid.149519181115_crid.725790844702_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9197522&cid=&gad_source=1&gclid=CjwKCAjwtdi_BhACEiwA97y8BPo8qH9JkaOF6DG2y4SCXYfkeHvjfUn1hwjuSv5yuOI_A27lC81xKxoCYT4QAvD_BwE&gclsrc=aw.ds" target="_blank">Acesse meu linkedin</a> </li>
             </ul>
 
             <section id="formacaoAcademica">
@@ -71,26 +68,62 @@
             </section>
 
             <section id="meusProjetos">
-                <h2>Meus projetos</h2>
-                <p>O projeto mais recente foi um jogo que criamos em sala de aula<br>
-                   com o auxílio dos professores. O jogo consiste em pousar na lua.</p>
+                <ul class="card">
+                    <li class="titulo-card">Meus projetos</li>
+                    <li class="meus-projetos">O projeto mais recente foi um jogo que criamos em sala de aula<br>
+                       com o auxílio dos professores. O jogo consiste em pousar na lua.</li>
+
+                </ul>
             </section>
             
             <section id="meusArtigos">
-                <h2>Meus artigos</h2>
+                <ul class="card">
+                    <li class="titulo-card">Meus Artigos</li>
+                    <li class="meus-artigos"></li>
+                </ul>
             </section>
             
-            <footer id="contato">
-                <h2>Links úteis</h2>
-                <a href="https://migueldev05.github.io/lopal_moonlander/" target="_blank">Jogo da Alunissagem</a>
-                <form>
+            <section id="contato">
+                <ul class="card">
+                    <li class="titulo-card">Links úteis</li>
+                    <li> <a href="https://migueldev05.github.io/lopal_moonlander/" target="_blank">Jogo da Alunissagem</a></li>
+                </ul>
+                <br>
+                <form> 
                     <input type="text" name="nome">
                     <input type="text" name="email">
                     <textarea name="mensagem" rows=""></textarea>
                     <input type="submit" name="botaoEnviar">
                 </form>
+            
+                <address>São Paulo, SP - Brasil</address>
                 <h3>Por: Miguel Moreira</h3> 
-            </footer>
+            </section>
+            
+            <script>
+                document.querySelector('#botão-tema').addEventListener('click',trocaTema);
+
+                function trocarTema(){
+                    const root = document.documentElement;
+
+                    if (root.getAttribute('data-theme') === 'dark'){
+                        root.removeAttribute('data-theme');
+                    }else {
+                        root.setAttribute('data-theme', 'dark');
+                    }
+                }
+
+                document.querySelector('#botao-contraste').addEventListener('click', trocaTemaContraste);
+                function trocaTemaContraste(){
+                    const root = doument.documentElement;
+                    
+                    if (root.getAttribute('data-theme') === 'alto-contraste'){
+                        root.removeAttribute('data-theme')
+                    }else{
+                        root.removeAttribute('data-theme', 'alto-contraste');
+                    }
+                }
+            </script>
         </section>
     </body>
 </html>

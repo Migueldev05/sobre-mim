@@ -1,169 +1,207 @@
-/* CSS interno */
+:root {
+    --cor-primaria: #ffffff;
+    --cor-secundaria: #fa9393;
+    --cor-fundo: #000000;
+    --cor-primaria-titulo: #c83737;
+    --cor-primaria-texto: #000;
+    --cor-link: #c02e2e;
+    --cor-bordas: #ac5e5e;
+}
 
+[data-theme="dark"]{
+    --cor-primaria: #190a55;
+    --cor-secundaria: #2c3678;
+    --cor-fundo: rgb(181, 0, 0);
+    --cor-primaria-titulo: #fff;
+    --cor-primaria-texto: #e60404;
+    --cor-link: #3220f9;
+    --cor-bordas: #fff5f5;
+}
 
-body{ 
+body {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--cor-fundo);
 }
 
-h1{
-    font-size: 2em;  /* 1rem = 16px => 1em = "M" */
-    font-weight: bold;
+h1 {
+    font-size: 2em;
+    /* 1 em = 1 'M';*/
+
+    font-weight: 700;
 }
 
-h2{ 
+h2 {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-header{
-    background-color: #c50404;
-    padding: 1rem 2rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    position: sticky; 
+body h1{
+    background-color: var(--cor-primaria);
+    color: var(--cor-primaria-titulo);
+    margin: auto;
+    text-align: center;
+}
+header {
+    background-color: var(--cor-primaria);
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 8px rgba(229, 248, 122, 0.1);
+    position: sticky;
+    /*Pode ser necessÃ¡rio 'top', 'left', 'right' ou 'bottom';*/
     top: 0;
 }
 
-header nav{
-    padding: 1rem 2rem;
-    box-shadow: 0px 4px 8px;
+header nav {
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     top: 0;
 }
 
-header ul{ 
+header ul {
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
-header a{
-    color: #ffffff;
+header h1 {
+    color: var(--cor-primaria-titulo);
+}
+
+header a {
+    color: var(--cor-primaria-titulo);
     font-weight: 700;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
 }
 
-header a:hover{
-    background-color: rgb(139, 0, 0);
-}
- 
-#sobreMim a{
-    color: red;
+header a:hover {
+    background-color: var(--cor-secundaria);
+    border-radius: 6px;
 }
 
-section{ 
+a {
+    color: var(--cor-link);
+}
+
+a:hover{
+    text-decoration: underline;  
+}
+
+section {
+    /*margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;*/
     height: auto;
     width: auto;
     margin: 2rem;
-    scroll-margin-top: 4rem; 
+    scroll-margin-top: 4rem;
     padding: 1rem;
-    border: 1px solid darkred;
-    border-radius: 6px;
-    /* overflow: hidden; */
+    /*border-width: 1px;
+    border-style: solid;
+    border-color: #000000;*/
     overflow: auto;
     text-align: center;
+    background-color: var(--cor-primaria);
+    border-radius: 10px;
+    color: var(--cor-primaria-titulo);
 
-    img{
+    img {
         margin: auto;
     }
 }
 
-p{
-    margin-bottom: 2rem;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-weight: 700;
-}
-
-input[type="text"],
-input[type="email"],
-input,
-textarea { 
-    border: 1px solid lightgray;
-    border-radius: 8px;
-    padding: .25rem .75rem;
-    color: #341d1d;
-    resize: none;
-}
-
-input[type="submit"]{
-    background-color: darkred;
-    color: floralwhite;
-}
-
-textarea{
-    max-width: 80rem;
-    height: 5rem;
-}
-
-.card {
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    list-style: none;
-}
-
-.titulo-card {
-    font-weight: bold;
-    color: rgb(81, 1, 1);
-    font-size: 1.3rem;
-}
-
-.instituicao-card {
-    font-size: 1.1rem;
-    color: #555;
-
-}
-
-.cards-em-coluna{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.titulo-secao{
+.titulo-secao {
     text-align: center;
     margin-bottom: 2rem;
 }
-
-section#formacaoAcademica{
-    border: none;
+  
+#sobreMim {
+    display: block;
+    padding: 4rem 10rem;
 }
 
-.tecnologia-nome{
-    font-size: 1.2rem;
-    color: #555;
+#sobreMim img {
+    width: 30vw;
+    border-radius: 50%;
+    border: 5px solid var(--cor-bordas);
+    box-shadow: 2px 2px 6px rgba(0, 34, 119, 0.3);
 }
 
-.icone-card{
-    font-size: 1.5;
+p {
+    margin-bottom: 1rem;
 }
 
-.soft-skills{
-    font-size: 1.1rem;
-    color: #555;
+#contato input[type="text"],
+input[type="email"],
+textarea {
+    background-color: var(--cor-bordas);
 }
 
-section#hardSkills{
-    border: none;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 700px;
+    margin: auto;
 }
 
-section#softSkills{
-    border: none;
+footer {
+    color: var(--cor-primaria-texto);
+    text-align: center;
+    margin: auto;
 }
 
-card-em-coluna {
+input,
+textarea {
+    border: 1px solid #f8b9b9;
+    border-radius: 6px;
+    padding: .25rem .75rem;
+    resize: none;
+    color: var(--cor-primaria-texto);
+}
+
+input[type="submit"] {
+    background-color: var(--cor-bordas);
+    color: var(--cor-primaria-texto);
+}
+
+.card{
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 6px rgba(255, 0, 0, 0.845);
+}
+
+.titulo{
+    font-weight: bold;
+    color: var(--cor-primaria-titulo);
+    font-size: 1.3rem;
+}
+
+.cards-em-coluna {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-cards-em-liha{
+.cards-em-linha{
     display: flex;
     flex-direction: row;
     gap: 1rem;
     flex-wrap: wrap;
-}//
+}
 
+.meus-artigos{
+    font-size: 1.1rem
+
+}
+
+.card-intituicao{
+    font-size:1.1rem;
+}
+
+#meusProjetos .card{
+    width: 30%;
+}
+
+.botao{
+    padding: 0.5rem 1rem 
+}
