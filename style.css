@@ -11,9 +11,9 @@
 [data-theme="dark"]{
     --cor-primaria: #190a55;
     --cor-secundaria: #2c3678;
-    --cor-fundo: rgb(181, 0, 0);
+    --cor-fundo: rgb(0, 116, 211);
     --cor-primaria-titulo: #fff;
-    --cor-primaria-texto: #e60404;
+    --cor-primaria-texto: #0493e6;
     --cor-link: #3220f9;
     --cor-bordas: #fff5f5;
 }
@@ -167,13 +167,13 @@ input[type="submit"] {
 .card{
     border-radius: 8px;
     padding: 2rem;
-    box-shadow: 0 2px 6px rgba(255, 0, 0, 0.845);
+    box-shadow: 0 2px 6px rgba(64, 0, 255, 0.845);
 }
 
 .titulo{
     font-weight: bold;
     color: var(--cor-primaria-titulo);
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
 
 .cards-em-coluna {
